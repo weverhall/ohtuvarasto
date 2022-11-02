@@ -3,6 +3,9 @@ from varasto import Varasto
 
 
 class TestVarasto(unittest.TestCase):
+    def setUp(self):
+        self.varasto = Varasto("~BREAKING~")
+
     def test_konstruktori_luo_tyhjan_varaston(self):
         self.varasto = Varasto(10)
         self.assertAlmostEqual(self.varasto.saldo, 0)
